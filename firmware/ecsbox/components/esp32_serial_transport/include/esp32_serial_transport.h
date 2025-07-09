@@ -22,6 +22,7 @@ extern "C"
 
 #define RMW_UXRCE_TRANSPORT_CUSTOM
 
+
 bool esp32_serial_open(struct uxrCustomTransport * transport);
 bool esp32_serial_close(struct uxrCustomTransport * transport);
 size_t esp32_serial_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);

@@ -1,5 +1,5 @@
-#ifndef TEST_BUTTON_H
-#define TEST_BUTTON_H
+#ifndef E_STOP_H
+#define E_STOP_H
 #define E_BUTTON 33
 
 
