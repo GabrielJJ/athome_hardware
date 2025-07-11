@@ -15,6 +15,11 @@
 #ifndef _MICROROS_CLIENT_ESP32_SERIAL_TRANSPORT_H_
 #define _MICROROS_CLIENT_ESP32_SERIAL_TRANSPORT_H_
 
+#include <uxr/client/transport.h>
+#include <driver/uart.h>
+#include <driver/gpio.h>
+
+
 #ifdef __cplusplus
 extern "C"
 {

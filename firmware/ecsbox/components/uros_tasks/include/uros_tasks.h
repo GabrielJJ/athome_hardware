@@ -15,11 +15,10 @@
 #include <rmw_microros/rmw_microros.h>
 #include <std_msgs/msg/bool.h>
 
-#include "uros_client/include/uros_client.h"
-#include "adcreader/include/adcreader.h"
-#include "e_stop/include/e_stop.h"
-#include "rele/include/rele.h"
-#include "buzzer/include/buzzer.h"
+#include "adcreader.h"
+#include "e_stop.h"
+#include "rele.h"
+#include "buzzer.h"
 
 #define RCCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Aborting.\n",__LINE__,(int)temp_rc);vTaskDelete(NULL);}}
 #define RCSOFTCHECK(fn) { rcl_ret_t temp_rc = fn; if((temp_rc != RCL_RET_OK)){printf("Failed status on line %d: %d. Continuing.\n",__LINE__,(int)temp_rc);}}
@@ -29,12 +28,14 @@
   if (uxr_millis() - init > MS) { X; init = uxr_millis();} \
 } while (0)
 
-bool buzzer_started = false;
-float warning_voltage = 35.0;
+
+bool createEntities(void);
+bool destroyEntities(void);
 
 void thread_e_button(void * arg);
 void thread_battery_status(void * arg);
 void micro_ros_task(void * arg);
+
 
 #endif
 

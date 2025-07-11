@@ -1,7 +1,5 @@
-#include <uxr/client/transport.h>
 
-#include <driver/uart.h>
-#include <driver/gpio.h>
+#include "esp32_serial_transport.h"
 
 #define UART_TXD  (CONFIG_MICROROS_UART_TXD)
 #define UART_RXD  (CONFIG_MICROROS_UART_RXD)

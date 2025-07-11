@@ -1,3 +1,15 @@
 idf_component_register( SRCS "src/uros_tasks.c"
-			INCLUDE_DIRS "include"
+			INCLUDE_DIRS "include" 
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rcl" 
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rcutils/"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rmw"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rosidl_runtime_c"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rosidl_typesupport_interface"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/std_msgs"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/rcl_action"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/action_msgs"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/unique_identifier_msgs"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/builtin_interfaces"
+			"/home/gabrielj/esp/esp-idf/components/micro_ros_espidf_component/include/sensor_msgs"
+			REQUIRES esp32_serial_transport adcreader e_stop rele buzzer micro_ros_espidf_component
 )

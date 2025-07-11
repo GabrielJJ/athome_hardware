@@ -13,10 +13,12 @@
 
 #include <esp_adc/adc_oneshot.h>
 
-#include "uros_client.h"
 #include "uros_tasks.h"
 
 static size_t uart_port = UART_NUM_0;
+
+
+void app_main(void);
 
 void app_main(void)
 {
@@ -48,4 +50,8 @@ void app_main(void)
             NULL,
             CONFIG_MICRO_ROS_APP_TASK_PRIO,
             NULL);
+
+	while(1){
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+	}
 }
