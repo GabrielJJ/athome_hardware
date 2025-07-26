@@ -42,8 +42,8 @@ void app_main(void)
 #endif  // RMW_UXRCE_TRANSPORT_CUSTOM
 
 
-	// xTaskCreate(thread_e_button, "e_button_task", 2048, NULL, 5, NULL);
-	xTaskCreate(thread_battery_status, "battery_status_task", 2048, NULL, 5, NULL);
+	xTaskCreate(thread_e_button, "e_button_task", 2048, NULL, 5, NULL);
+	// xTaskCreate(thread_battery_status, "battery_status_task", 2048, NULL, 5, NULL);
     xTaskCreate(micro_ros_task,
             "uros_task",
             CONFIG_MICRO_ROS_APP_STACK,
@@ -51,7 +51,7 @@ void app_main(void)
             CONFIG_MICRO_ROS_APP_TASK_PRIO,
             NULL);
 
-	while(1){
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
-	}
+	// while(1){
+	// 	vTaskDelay(1000 / portTICK_PERIOD_MS);
+	// }
 }
