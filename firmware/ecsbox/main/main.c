@@ -28,7 +28,7 @@ sensor_msgs__msg__BatteryState msg_batmiss;
 rcl_publisher_t publisher_e_stop;
 rcl_publisher_t publisher_batmiss;
 bool buzzer_started = false;
-float warning_voltage = 35.0;
+float warning_voltage = 32.0;
 
 void thread_e_button(void * arg)
 {
